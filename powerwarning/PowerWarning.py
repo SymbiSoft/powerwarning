@@ -18,6 +18,11 @@
 # a door/window is opened. This use requires an additional phone connected directly to
 # power grid: if you receive SMS from BOTH phones, it means power is missing; if you
 # receive SMS only from the window-connected phone, it means the window has been opened.
+#
+#
+# Credits:
+# from an idea by Stefano Sanna ( http://www.gerdavax.it/mobile/pys60-blackout-alarm/ )
+
 
 import e32, messaging
 import sysagent, esysagent
@@ -193,14 +198,14 @@ def quit():
     print "TERMINATO."
     print
 
-#LogEvent(TimeString() + " - " + "Reading settigs...")  
+LogEvent(TimeString() + " - " + "Reading settigs...")  
 ReadSettings()
-#LogEvent(TimeString() + " - " + "Data read:")
-#LogEvent(TimeString() + " - " + "Phone1: " + PHONE_NUMBER1)
-#LogEvent(TimeString() + " - " + "Phone2: " + PHONE_NUMBER2)
-#LogEvent(TimeString() + " - " + "Phone3: " + PHONE_NUMBER3)
-#LogEvent(TimeString() + " - " + "Standard polling: " + str(STANDARD_POLLING_INTERVAL))
-#LogEvent(TimeString() + " - " + "Power off polling: " + str(NOPOWER_POLLING_INTERVAL))
+LogEvent(TimeString() + " - " + "Data read:")
+LogEvent(TimeString() + " - " + "Phone1: " + PHONE_NUMBER1)
+LogEvent(TimeString() + " - " + "Phone2: " + PHONE_NUMBER2)
+LogEvent(TimeString() + " - " + "Phone3: " + PHONE_NUMBER3)
+LogEvent(TimeString() + " - " + "Standard polling: " + str(STANDARD_POLLING_INTERVAL))
+LogEvent(TimeString() + " - " + "Power off polling: " + str(NOPOWER_POLLING_INTERVAL))
 
 f2=open("E:\\nokia\\others\\powerlog.txt","w")
 f2.write("Power status log\n")
